@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Artifacts</title>
+
+	<style type="text/css">
+
+	html, body {
+		margin:0;
+		padding:0;
+	}
+
+	h1 {
+		font-family: "Comic Sans MS", cursive, sans-serif;
+		font-size: 125px;
+		color: white;
+		text-shadow:
+		3px 3px 0 #000,
+		-2px -2px 0 #000,
+		2px -2px 0 #000,
+		-2px  2px 0 #000,
+		2px  2px 0 #000;
+		text-align: center;
+	}
+
+	figure.papa.kaiser {
+		z-index: 0;
+		position: absolute;
+		left: 50%;
+		margin-left: -400px;
+		top: 50%;
+		margin-top: -210px;
+	}
+
+	figure.kaiser {
+		display: block;
+		width: 500px;
+		height: 500px;
+		background-image: url(kaiser.gif);
+		background-repeat: no-repeat;
+	}
+
+	marquee {
+		font-family: "Comic Sans MS", cursive, sans-serif;
+		font-size: 60px;
+		z-index: 100;	
+		color: white;
+		text-shadow:
+		3px 3px 0 #000,
+		-2px -2px 0 #000,
+		2px -2px 0 #000,
+		-2px  2px 0 #000,
+		2px  2px 0 #000;
+	}
+
+</style>
+</head>
+<body>
+
+	<section id="kaiser-army">
+		<div class="dance container">
+			<h1 class="text-center">Artifacts</h1>
+			<figure class="papa kaiser">
+				<img src="kaiser.gif">
+			</figure>
+			<marquee scrollamount="30">Join Artifacts</marquee>
+
+			<marquee direction="right" scrollamount="50">Daily and weekly boss carries</marquee>
+
+			<marquee scrollamount="45">Active discord chat</marquee>
+
+			<marquee direction="right" scrollamount="15">Biggest settlers in reboot</marquee>
+
+			<marquee scrollamount="60">Only cucks allowed</marquee>
+		</div>
+	</section>
+
+	<audio loop autoplay>
+		<source src="konga.mp3" type="audio/mp3">
+	</audio>
+
+	<script>
+
+		var bodyElement = document.querySelector("body");
+
+		var requestAnimationFrame = window.requestAnimationFrame || 
+			window.mozRequestAnimationFrame || 
+			window.webkitRequestAnimationFrame || 
+			window.msRequestAnimationFrame;
+
+		var delay = 0;
+
+		function changeColor() {
+			delay++;
+
+			if (delay > 15) {
+				bodyElement.style.backgroundColor = getColor();
+				delay = 0;
+			}
+			requestAnimationFrame(changeColor);
+		}
+		changeColor();           
+
+		function getColor() {
+
+	    // creating a random number between 0 and 255
+    	var r = Math.floor(Math.random()*256);
+    	var g = Math.floor(Math.random()*256);
+    	var b = Math.floor(Math.random()*256);
+
+    	// going from decimal to hex
+    	var hexR = r.toString(16);
+    	var hexG = g.toString(16);
+    	var hexB = b.toString(16);
+
+    	// making sure single character values are prepended with a "0"
+    	if (hexR.length == 1) {
+    		hexR = "0" + hexR;
+   	 	}
+
+    	if (hexG.length == 1) {
+    		hexG = "0" + hexG;
+ 		}
+
+    	if (hexB.length == 1) {
+    		hexB = "0" + hexB;
+    	}
+
+    	// creating the hex value by concatenatening the string values
+    	var hexColor = "#" + hexR + hexG + hexB;
+    	return hexColor.toUpperCase();
+	}
+</script>
+</body>
+</html>
